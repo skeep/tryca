@@ -16,50 +16,160 @@
 
         <h1>Open current account</h1>
 
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-current="page" href="#">Basic info</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Check eligibility</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">eKYC</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Personal Details</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Other Details</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Video KYC</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Fund account</a>
-            </li>
-        </ul>
+        <div class="row">
+            <div class="col-4" id="nav">
 
-        <form action="">
-            <div class="form-group">
-                <div class="form-row">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="ABC XYZ" disabled>
-                </div>
             </div>
-            <div class="form-group">
-                <div class="form-row">
-                    <label for="DOB" class="form-label">Date of Birth</label>
-                    <input type="date" class="form-control" id="DOB" value="2000-01-01">
-                </div>
+            <div class="col-8">
+
+                <form action="">
+
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="father" class="form-label">Entity documents 2</label>
+                            <div class="input-group mb-3">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Select document type</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">License / registration certificate</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                                <input type="file" class="form-control" id="inputGroupFile03"
+                                    aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    id="button-addon2">Upload</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-md-4 col-form-label">Registered Address</label>
+                        <div class="col-md-8">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Registered addess comes here</option>
+                                <option value="1">Entity address shown here if different</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-md-4 col-form-label">Nature of Business</label>
+                        <div class="col-md-8">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected> -- Select --</option>
+                                <option>Manufacturing</option>
+                                <option>Service Provider</option>
+                                <option>Stock Brokers</option>
+                                <option>Real Estate</option>
+                                <option>Wholesale Trading</option>
+                                <option>Others</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-md-4 col-form-label">Detail of Activity </label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="address" placeholder="ABC XYZ">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-md-4 col-form-label">Nature of Industry </label>
+                        <div class="col-md-8">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>-- Select --</option>
+                                <option>Automobile</option>
+                                <option>Petrol Pump</option>
+                                <option>Contactors</option>
+                                <option>Oil</option>
+                                <option>Consultancy.</option>
+                                <option>Education</option>
+                                <option>NBFC</option>
+                                <option>Retail Jewellery.</option>
+                                <option>Furniture/ Timber.</option>
+                                <option>Broking.</option>
+                                <option>Advt Agencies.</option>
+                                <option>Restaurants.</option>
+                                <option>Forex Dealer/ Bullion.</option>
+                                <option>Chit Fund.</option>
+                                <option>Fishery/ Poultry.</option>
+                                <option>Cement/Paints.</option>
+                                <option>Engineering Goods.</option>
+                                <option>Pharmaceuticals.</option>
+                                <option>Hotels/Resorts</option>
+                                <option>Consumer Durables.</option>
+                                <option>Money Lender.</option>
+                                <option>Transportation/Logistics.</option>
+                                <option>IT/Software/BPO.</option>
+                                <option>Media/ Entertainment.</option>
+                                <option>Construction.</option>
+                                <option>Steel/Hardware.</option>
+                                <option>Dairy/Food Processing.</option>
+                                <option>Textiles/Garments</option>
+                                <option>Printing/ Publishing</option>
+                                <option>Travel/Tour Agency</option>
+                                <option>Marble/ Granite.</option>
+                                <option>Agricultural Commodities</option>
+                                <option>Leasing & Hire Purchase.</option>
+                                <option>Housing Finance.</option>
+                                <option>Fertilizers/ Chemicals/Seeds/Pesticides.</option>
+                                <option>Electronics/Computer Hardware.</option>
+                                <option>Issue & Portfolio Management.</option>
+                                <option>Hospital/Nursing Home/ Clinics.</option>
+                                <option>Fast Moving Consumer Goods (FMCG).</option>
+                                <option>Term Lending Institutions.</option>
+                                <option>Auto Finance.</option>
+                                <option>Others.</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-md-4 col-form-label">Annual trunover (in INR)</label>
+                        <div class="col-md-8">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>-- Sellect --</option>
+                                <option value="1">20 - 30 lakh</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="col-md-4">&nbsp;</div>
+                        <div class="col-md-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    I am involved in import / export
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="impexp">
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-md-4 col-form-label">IEC Number </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="address" placeholder="ABC XYZ">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-md-4 col-form-label">Value</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="address" placeholder="ABC XYZ">
+                            </div>
+                        </div>
+                    </section>
+                </form>
             </div>
-            <div class="form-group">
-                <div class="form-row">
-                    <label for="father" class="form-label">father</label>
-                    <input type="text" class="form-control" id="father" placeholder="ABC XYZ" disabled>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
         integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
@@ -74,6 +184,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="nav.js"></script>
 </body>
 
 </html>
