@@ -1,6 +1,6 @@
 var navItems = [{
     label: 'Basic information',
-    link: ''
+    link: '/'
 }, {
     label: 'Eligibility',
     link: '/2.html'
@@ -30,11 +30,14 @@ var navItems = [{
     link: '/6.html'
 }];
 
+var baseURL = (window.location.hostname === "localhost") ? '' : '/tryca';
+console.log(baseURL);
+
 var navRender = `
 <ul class="nav flex-column">
 ${navItems.map(item => `
 <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="${item.link}">${item.label}</a>
+    <a class="nav-link active" aria-current="page" href="${baseURL}${item.link}">${item.label}</a>
 </li>
 `).join('')}
 </ul>
