@@ -34,7 +34,7 @@ var navItems = [{
 var baseURL = (window.location.hostname === "localhost") ? '' : '/tryca';
 var numberPattern = /\d+/g;
 var pathName = window.location.pathname;
-var page = !(pathName === '/') ? pathName.match(numberPattern).join('') : 1;
+var page = !(pathName.slice(-1) === '/') ? pathName.match(numberPattern).join('') : 1;
 
 var navRender = `
 <ul class="nav flex-column">
