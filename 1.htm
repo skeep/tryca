@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Prototype</title>
+    <link rel="stylesheet" href="screen.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Open current account</h1>
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Basic info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Check eligibility</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">eKYC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Personal Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Other Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Video KYC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Fund account</a>
+            </li>
+        </ul>
+
+        <form action="">
+            <!-- CC/OD -->
+            <div class="form-group">
+                <label class="form-check-label" for="cc_od">
+                    Are you tax residence of India and an Indian national
+                </label>
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    Only Tax Residence of India and Indian national are eligible for opening account.
+                </small>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="nationality_options" id="nationality_yes"
+                        value="1" data-toggle-target="#indian" autocomplete="off">
+                    <label class="form-check-label" for="nationality_yes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="nationality_options" id="nationality_no"
+                        value="0" data-toggle-target="#indian" autocomplete="off">
+                    <label class="form-check-label" for="nationality_no">No</label>
+                </div>
+
+            </div>
+
+            <!-- CC/OD -->
+            <section id="indian">
+                <div class="form-group">
+                    <label class="form-check-label" for="cc_od">
+                        Do you have Credit card / Over Draft facility?
+                    </label>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Iff you have CC/OD already we will not be able to open a current acount for you
+                    </small>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="ccodOptions" id="ccod_yes" value="0"
+                            autocomplete="off" data-show-target="#ccod_yes_section" data-hide-target="#ccod_no_section">
+                        <label class="form-check-label" for="ccod_yes">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="ccodOptions" id="ccod_no" value="1"
+                            autocomplete="off" data-show-target="#ccod_no_section" data-hide-target="#ccod_yes_section">
+                        <label class="form-check-label" for="ccod_no">No</label>
+                    </div>
+
+                </div>
+                <!-- CC/OD -->
+                <section id="ccod_yes_section">
+                    <div class="form-group">
+                        <label class="form-check-label" for="cc_od">
+                            Are you interested in Credit card / Over Draft facility form Bank?
+                        </label>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            If you want then we will ask you few contact details and our custmer service repesentative
+                            will reach you.
+                        </small>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ccodBankOptions" id="inlineRadio1"
+                                value="1" data-toggle-target="#give_details" autocomplete="off">
+                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ccodBankOptions" id="inlineRadio2"
+                                value="0" data-toggle-target="#give_details" autocomplete="off">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+
+                <section id="ccod_no_section">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1" class="form-check-label">
+                            How much other credit exposure you have?</label>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Exposure beyond CC/OD
+                        </small>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="otherExpOption" id="credit_exp_less_five"
+                                value="5-" data-show-target="#all_clear" data-hide-target="#give_details"
+                                autocomplete="off">
+                            <label class="form-check-label" for="credit_exp_less_five">Less than 5 crore</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="otherExpOption" id="credit_exp_more_five"
+                                value="5+" data-show-target="#give_details" data-hide-target="#all_clear"
+                                autocomplete="off">
+                            <label class="form-check-label" for="credit_exp_more_five">More than 5 crore</label>
+                        </div>
+
+                    </div>
+
+                    <section id="all_clear">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1" class="form-check-label">Please select constitution
+                                type</label>
+                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                For Sole prop a current account will be opend
+                            </small>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="constitution" id="sole"
+                                    value="0" autocomplete="off" data-toggle-target="#account_type_choice">
+                                <label class="form-check-label" for="sole">
+                                    Sole Proprietorship
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="constitution" id="individual"
+                                    value="1" autocomplete="off" data-toggle-target="#account_type_choice">
+                                <label class="form-check-label" for="individual">
+                                    Individual Current Account
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1" class="form-check-label">Open merchent account as well
+                                ?</label>
+                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                By opening merchant account you will get a POS machine
+                            </small>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="maOption" id="ma_yes" value="1"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="ma_yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="maOption" id="ma_no" value="0"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="ma_no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1" class="form-check-label">What is the annual turn over
+                                of you business?</label>
+                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                If your annual turn over is more than 20 lank INR and opting for merchant account we
+                                will need your GSTIN number.
+                            </small>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="turnOver" id="less20" value="20-"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="less20">
+                                    Less than 20 Lakh INR
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="turnOver" id="more20" value="20+"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="more20">
+                                    More than 20 Lakh INR
+                                </label>
+                            </div>
+
+                        </div>
+                        <section id="account_type_choice">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1" class="form-check-label">Account type ?</label>
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+                                    You can 2 types of account
+                                </small>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="account_type" id="Savings"
+                                        value="savings" autocomplete="off" data-show-target="#give_details"
+                                        data-hide-target="#ica">
+                                    <label class="form-check-label" for="Savings">
+                                        Savings Account (Mini SB)
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="account_type" id="current"
+                                        value="current" autocomplete="off" data-show-target="#ica"
+                                        data-hide-target="#give_details">
+                                    <label class="form-check-label" for="current">
+                                        Individual Current Account
+                                    </label>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="ica">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Mobile</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Mobile"
+                                                aria-label="Mobile" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button">Get OTP</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <form action="http://localhost:52330/proto/2.html">
+                                            <label for="inputEmail4">OTP</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="OTP"
+                                                    aria-label="OTP" aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary"
+                                                        type="submit">Validate</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+
+                </section>
+
+                <section id="give_details">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1" class="form-check-label">How can we contact
+                                you?</label>
+                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                If you mention specific branch we will send represenative from choosen branch only
+                            </small>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Name</label>
+                                    <input type="email" class="form-control" id="inputEmail4"
+                                        placeholder="Please provide first name and last name together">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Mobile</label>
+                                    <input type="number" class="form-control" id="inputPassword4"
+                                        placeholder="10 digit mobile number only">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputEmail4">State</label>
+                                    <input type="text" class="form-control" id="inputEmail4" placeholder="State">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputPassword4">City</label>
+                                    <input type="text" class="form-control" id="inputPassword4" placeholder="City">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputPassword4">Branch</label>
+                                    <input type="text" class="form-control" id="inputPassword4" placeholder="Branch">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="button" data-toggle="modal"
+                                data-target="#thankYouWillContact">Send details</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </form>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="thankYouNoContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Thank you</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    See you again
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="thankYouWillContact" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Thank you</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Thank you for showing interest. Our customer service agent will get in touch with you
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
