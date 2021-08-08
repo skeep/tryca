@@ -18,16 +18,16 @@ var navItems = [{
     link: '/6.html'
 },{
     label: 'Common Declaration',
-    link: '/6.html'
+    link: '/7.html'
 },{
     label: 'Video KYC',
-    link: '/6.html'
+    link: '/8.html'
 },{
     label: 'Digital fuding',
-    link: '/6.html'
+    link: '/9.html'
 },{
     label: 'Thank you',
-    link: '/6.html'
+    link: '/10.html'
 }];
 
 var baseURL = (window.location.hostname === "localhost") ? '' : '/tryca';
