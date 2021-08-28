@@ -1,0 +1,55 @@
+type: object
+properties:
+  FetchCustomerCASADetailsReqDTO:
+    type: object
+    required:
+      - mobileNumber
+      - dateOfBirth
+      - panNumber
+    properties:
+      mobileNumber:
+        type: string
+        default: 919944558800
+        description: Customer Mobile Number
+        maxLength: 12
+      dateOfBirth:
+        type: string
+        default: 19900101
+        description: Customer Date of Birth (either Pan Number or DOB, any one is mandatory)
+      panNumber:
+        type: string
+        default: PAN10234567
+        description: Customer Pan Number Birth (either Pan Number or DOB, any one is mandatory)
+  sessionContext:
+    type: object
+    required:
+      - channel
+      - bankCode
+      - userId
+      - transactionBranch
+      - externalReferenceNo
+    properties:
+      channel:
+        type: string
+        default: APIGW
+        maxLength: 5
+        description: Channel code from which transaction is executed. Every system calling OBP-MW services will have unique channel code. Ex - IB01 for Netbanking channel
+      bankCode:
+        type: string
+        default: 08
+        maxLength: 5
+        description: Bank code or financial institution identification of the user performing an interaction with the host. 
+      userId:
+        type: string
+        maxLength: 36
+        default: DevUser01
+        description: System or Channel User ID. Every system/channel will a specific pre-configured user.
+      transactionBranch:
+        type: string
+        maxLength: 5
+        default: 089999
+        description: Branch from which the user is doing the transaction. It may differ from the branch to which the user belongs
+      externalReferenceNo:
+        type: string
+        maxLength: 40
+        description: Unique  reference number for each transaction for a lifetime to be sent by ACL

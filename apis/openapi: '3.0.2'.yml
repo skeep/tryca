@@ -1,0 +1,44 @@
+openapi: '3.0.2'
+info:
+  title: HDFC Bank Open API
+  description: HDFC Bank Open API
+  termsOfService: https://api.hdfcbank.com/terms/
+  contact:
+    name: API Support
+    url: https://api.hdfcbank.com/support
+    email: apisupport@hdfcbank.com
+  license:
+    name: Propiratory
+    url: https://api.hdfcbank.org/licenses/LICENSE-2.0.html
+  version: 1.0.1
+servers:
+  - url: https://api-vr.hdfcbank.com:9443/API/v1
+    description: Virtualised server
+  - url: https://api-uat.hdfcbank.com:9443/API/v1
+    description: Staging server
+  - url: https://api.hdfcbank.com:9443/API/v1
+    description: Production server
+components:
+  schemas:
+    casaRequest:
+      $ref: casaRequest.yml
+    casaResponse:
+      $ref: casaResponse.yml
+paths:
+  /Fetch_CASA_Details :
+    post:
+      description: Fetch Customer CASA Details API
+      requestBody:
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/casaRequest'
+      responses:
+        '200':
+          description: Fetch Customer CASA Details API
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/casaResponse'

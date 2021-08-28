@@ -20,10 +20,10 @@ var navItems = [{
     label: 'Common Declaration',
     link: '/7.html'
 },{
-    label: 'Video KYC',
+    label: 'Digital fuding',
     link: '/8.html'
 },{
-    label: 'Digital fuding',
+    label: 'Video KYC',
     link: '/9.html'
 },{
     label: 'Thank you',
@@ -33,8 +33,10 @@ var navItems = [{
 
 var baseURL = (window.location.hostname === "localhost") ? '' : '/tryca';
 var numberPattern = /\d+/g;
+
 var pathName = window.location.pathname;
 var page = !(pathName.slice(-1) === '/') ? pathName.match(numberPattern).join('') : 1;
+console.log(page)
 
 var navRender = `
 <ul class="nav flex-column">

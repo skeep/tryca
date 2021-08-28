@@ -1,0 +1,9 @@
+{
+    {
+    "FetchCustomerCASADetailsReqDTO" : {
+    "mobileNumber":"919866696073",
+    "dateOfBirth":"19760101"
+   },
+     "sessionContext":
+     {
+  

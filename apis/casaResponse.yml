@@ -1,0 +1,93 @@
+type: object
+properties:
+  type:
+    type: string
+  status:
+    type: object
+    properties:
+      ErrorCode:
+        type: string
+      ExtendedReply:
+        type: string
+      ReplyCode:
+        type: string
+      ReplyText:
+        type: string
+      InternalReferenceNumber:
+        type: string
+      ExternalReferenceNo:
+        type: string
+      UserReferenceNumber:
+        type: string
+      isOverriden:
+        type: string
+      postingDate:
+        type: string
+  customerCASADetailsDTO:
+    type: object
+    properties:
+      customerType:
+        type: string
+        maxLength: 3
+        description: Customer Type
+      customerTypeDesc:
+        type: string
+        maxLength: 99
+        description: Customer Type Description
+      mobileNumber:
+        type: string
+        maxLength: 15
+        description: Customer Mobile Number
+      panNoAvailable:
+        type: string
+        maxLength: 1
+        description: Pan Number availability flag
+      customerFullName:
+        type: string
+        maxLength: 762
+        description: Customer Full Name
+      dateOfBirth:
+        type : string
+        description: Customer date of birth
+      accountNumber:
+          type : string
+          description: Customer CASA Account Number
+      accountStatus:
+          type : string
+          description: CASA Account Status
+      branchCode:
+          type : string
+          description: Branch Code
+      productCode:
+          type : interger
+          description: Product Code
+      productName:
+          type : string
+          description: Product Name
+      productType:
+          type : string
+          description: Product Type
+      accountType:
+          type : string
+          description: Account Type
+      custAcctRel:
+          type : string
+          description: Customer Account Relationship
+      nomineeAvailable:
+          type : string
+          description: Nominee Availability Flag
+      nomineeName:
+          type : string
+          description: Nominee Name
+      flgNomineeNameDisplay:
+          type : string
+          description: Nominee Display Flag
+      nomineeDOB:
+          type : string
+          description: Nominee date of birth
+      nomineeGuardian:
+          type : string
+          description: Nominee Guardian
+      TransactionStatus:
+        type: string
+        description: Describes the status of the transaction
